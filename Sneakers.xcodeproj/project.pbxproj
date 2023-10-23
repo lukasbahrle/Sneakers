@@ -14,6 +14,8 @@
 		F5DCC66D2AE7069800B418CE /* Sneaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DCC66C2AE7069800B418CE /* Sneaker.swift */; };
 		F5DCC66F2AE7081C00B418CE /* ScrollingLetters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DCC66E2AE7081C00B418CE /* ScrollingLetters.swift */; };
 		F5DCC6712AE709B000B418CE /* ScrollingColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DCC6702AE709B000B418CE /* ScrollingColors.swift */; };
+		F5DCC6732AE70A3700B418CE /* CTAButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DCC6722AE70A3700B418CE /* CTAButtonStyle.swift */; };
+		F5DCC6752AE70B5500B418CE /* WSScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DCC6742AE70B5500B418CE /* WSScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		F5DCC66C2AE7069800B418CE /* Sneaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sneaker.swift; sourceTree = "<group>"; };
 		F5DCC66E2AE7081C00B418CE /* ScrollingLetters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingLetters.swift; sourceTree = "<group>"; };
 		F5DCC6702AE709B000B418CE /* ScrollingColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingColors.swift; sourceTree = "<group>"; };
+		F5DCC6722AE70A3700B418CE /* CTAButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTAButtonStyle.swift; sourceTree = "<group>"; };
+		F5DCC6742AE70B5500B418CE /* WSScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 				F5DCC65F2AE7035400B418CE /* SneakersView.swift */,
 				F5DCC66E2AE7081C00B418CE /* ScrollingLetters.swift */,
 				F5DCC6702AE709B000B418CE /* ScrollingColors.swift */,
+				F5DCC6722AE70A3700B418CE /* CTAButtonStyle.swift */,
+				F5DCC6742AE70B5500B418CE /* WSScrollView.swift */,
 				F5DCC6612AE7035500B418CE /* Assets.xcassets */,
 				F5DCC6632AE7035500B418CE /* Preview Content */,
 			);
@@ -154,8 +160,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5DCC6752AE70B5500B418CE /* WSScrollView.swift in Sources */,
 				F5DCC6602AE7035400B418CE /* SneakersView.swift in Sources */,
 				F5DCC66F2AE7081C00B418CE /* ScrollingLetters.swift in Sources */,
+				F5DCC6732AE70A3700B418CE /* CTAButtonStyle.swift in Sources */,
 				F5DCC66D2AE7069800B418CE /* Sneaker.swift in Sources */,
 				F5DCC65E2AE7035400B418CE /* SneakersApp.swift in Sources */,
 				F5DCC6712AE709B000B418CE /* ScrollingColors.swift in Sources */,
