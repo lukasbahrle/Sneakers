@@ -61,15 +61,12 @@
 		F5DCC65C2AE7035400B418CE /* Sneakers */ = {
 			isa = PBXGroup;
 			children = (
+				F5DCC6792AE70D0600B418CE /* Resources */,
+				F5DCC6782AE70CC800B418CE /* Shared */,
+				F5DCC6772AE70CB400B418CE /* ButtonStyles */,
+				F5DCC6762AE70CA100B418CE /* Views */,
 				F5DCC66B2AE7068E00B418CE /* Models */,
 				F5DCC65D2AE7035400B418CE /* SneakersApp.swift */,
-				F5DCC65F2AE7035400B418CE /* SneakersView.swift */,
-				F5DCC66E2AE7081C00B418CE /* ScrollingLetters.swift */,
-				F5DCC6702AE709B000B418CE /* ScrollingColors.swift */,
-				F5DCC6722AE70A3700B418CE /* CTAButtonStyle.swift */,
-				F5DCC6742AE70B5500B418CE /* WSScrollView.swift */,
-				F5DCC6612AE7035500B418CE /* Assets.xcassets */,
-				F5DCC6632AE7035500B418CE /* Preview Content */,
 			);
 			path = Sneakers;
 			sourceTree = "<group>";
@@ -88,6 +85,41 @@
 				F5DCC66C2AE7069800B418CE /* Sneaker.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		F5DCC6762AE70CA100B418CE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F5DCC65F2AE7035400B418CE /* SneakersView.swift */,
+				F5DCC66E2AE7081C00B418CE /* ScrollingLetters.swift */,
+				F5DCC6702AE709B000B418CE /* ScrollingColors.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F5DCC6772AE70CB400B418CE /* ButtonStyles */ = {
+			isa = PBXGroup;
+			children = (
+				F5DCC6722AE70A3700B418CE /* CTAButtonStyle.swift */,
+			);
+			path = ButtonStyles;
+			sourceTree = "<group>";
+		};
+		F5DCC6782AE70CC800B418CE /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				F5DCC6742AE70B5500B418CE /* WSScrollView.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		F5DCC6792AE70D0600B418CE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F5DCC6632AE7035500B418CE /* Preview Content */,
+				F5DCC6612AE7035500B418CE /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,7 +331,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Sneakers/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Sneakers/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = H6XG62RMPN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -328,7 +360,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Sneakers/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Sneakers/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = H6XG62RMPN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
