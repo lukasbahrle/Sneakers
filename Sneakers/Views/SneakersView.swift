@@ -91,6 +91,7 @@ struct SneakersView: View {
             titles: sneakers.map { $0.title },
             containerScrollPercent: scrollPercent) { letterTransition($0)}
             .font(.custom("AvenirNextCondensed-HeavyItalic",fixedSize: minSide * 0.24))
+            .animation(.spring, value: scrollPercent)
     }
     
     private var ctaButton: some View {

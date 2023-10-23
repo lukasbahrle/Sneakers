@@ -53,7 +53,6 @@ struct ScrollingLetters: View {
                     .transition(transition(isMovingLeft))
             }
         }
-        .animation(.spring, value: containerScrollPercent)
         .onChange(of: containerScrollPercent) { oldValue, newValue in
             isMovingLeft = newValue - oldValue < 0
         }
