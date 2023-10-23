@@ -82,6 +82,7 @@ private struct PreviewView: View {
             ScrollingLetters(titles: titles, containerScrollPercent: scrollPercent) { _ in
                     .move(edge: .bottom).combined(with: .opacity)
             }
+            .animation(.spring(bounce: 0.6), value: scrollPercent)
             
             ScrollingLetters(titles: titles, containerScrollPercent: scrollPercent) { isMovingLeft in
                     .asymmetric(insertion: .move(edge: isMovingLeft ? .leading : .trailing), removal: .move(edge: isMovingLeft ? .trailing : .leading))
@@ -125,6 +126,7 @@ private struct PreviewView: View {
             Slider(value: $scrollPercent, in: 0...CGFloat(titles.count - 1))
                 .padding()
         }
+        .animation(.spring, value: scrollPercent)
         .font(.largeTitle)
         .fontWeight(.black)
     }
