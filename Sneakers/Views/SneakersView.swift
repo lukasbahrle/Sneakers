@@ -112,7 +112,8 @@ struct SneakersView: View {
             .resizable()
             .scaledToFit()
             .rotationEffect(.degrees(-36))
-            .shadow(radius: 5)
+            .shadow(color: .black.opacity(0.1), radius: 20)
+            .shadow(color: .black.opacity(0.5), radius: 30, y: 50)
     }
 }
 
