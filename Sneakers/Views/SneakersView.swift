@@ -33,6 +33,8 @@ struct SneakersView: View {
                         HStack(spacing: 0) {
                             ForEach(sneakers, id: \.id) {  sneaker in
                                 sneakerImage(sneaker.imageName)
+                                    .shadow(color: .black.opacity(0.1), radius: minSide * 0.07)
+                                    .shadow(color: .black.opacity(0.5), radius: minSide * 0.08, y: minSide * 0.12)
                                     .padding(.top, minSide * 0.25)
                                     .containerRelativeFrame(
                                         .horizontal,
@@ -112,8 +114,6 @@ struct SneakersView: View {
             .resizable()
             .scaledToFit()
             .rotationEffect(.degrees(-36))
-            .shadow(color: .black.opacity(0.1), radius: 20)
-            .shadow(color: .black.opacity(0.5), radius: 30, y: 50)
     }
 }
 
