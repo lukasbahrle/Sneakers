@@ -33,7 +33,7 @@ struct SneakersView: View {
                         HStack(spacing: 0) {
                             ForEach(sneakers, id: \.id) {  sneaker in
                                 sneakerImage(sneaker.imageName)
-                                    .shadow(color: .black.opacity(0.1), radius: minSide * 0.07)
+                                    .shadow(color: .black.opacity(0.07), radius: minSide * 0.07)
                                     .shadow(color: .black.opacity(0.5), radius: minSide * 0.08, y: minSide * 0.12)
                                     .padding(.top, minSide * 0.25)
                                     .containerRelativeFrame(
