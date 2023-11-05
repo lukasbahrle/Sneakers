@@ -9,7 +9,7 @@ extension ButtonStyle where Self == CTAButtonStyle {
 struct CTAButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .font(.custom("AvenirNextCondensed-Italic",fixedSize: 20))
+            .font(.custom("AvenirNextCondensed-Italic", size: 20, relativeTo: .body))
             .kerning(2)
             .fontWeight(.medium)
             .padding(.vertical, 12)
