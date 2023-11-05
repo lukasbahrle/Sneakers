@@ -49,7 +49,7 @@ struct ScrollingLetters: View {
             
             ForEach(indices.start...indices.end, id: \.self) { index in
                 let letter = allLetters[index]
-                Text("\(letter.uppercased())")
+                Text(verbatim: "\(letter.uppercased())")
                     .transition(transition(isMovingLeft))
             }
         }
@@ -65,6 +65,7 @@ private extension Comparable {
     }
 }
 
+#if DEBUG
 private struct PreviewView: View {
     let titles = [
         "Title One",
@@ -166,3 +167,4 @@ private struct PreviewTransitionScaleViewModifier: ViewModifier {
 #Preview {
     PreviewView()
 }
+#endif

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F53341CB2AF625A9004BF6B1 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = F53341CA2AF625A9004BF6B1 /* Localizable.xcstrings */; };
 		F5DCC65E2AE7035400B418CE /* SneakersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DCC65D2AE7035400B418CE /* SneakersApp.swift */; };
 		F5DCC6602AE7035400B418CE /* SneakersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DCC65F2AE7035400B418CE /* SneakersView.swift */; };
 		F5DCC6622AE7035500B418CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5DCC6612AE7035500B418CE /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F53341CA2AF625A9004BF6B1 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		F5DCC65A2AE7035400B418CE /* Sneakers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sneakers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5DCC65D2AE7035400B418CE /* SneakersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SneakersApp.swift; sourceTree = "<group>"; };
 		F5DCC65F2AE7035400B418CE /* SneakersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SneakersView.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			children = (
 				F5DCC6632AE7035500B418CE /* Preview Content */,
 				F5DCC6612AE7035500B418CE /* Assets.xcassets */,
+				F53341CA2AF625A9004BF6B1 /* Localizable.xcstrings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = F5DCC6512AE7035400B418CE;
 			productRefGroup = F5DCC65B2AE7035400B418CE /* Products */;
@@ -182,6 +186,7 @@
 			files = (
 				F5DCC6652AE7035500B418CE /* Preview Assets.xcassets in Resources */,
 				F5DCC6622AE7035500B418CE /* Assets.xcassets in Resources */,
+				F53341CB2AF625A9004BF6B1 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
