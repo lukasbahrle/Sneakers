@@ -3,6 +3,7 @@ import SwiftUI
 struct SneakersView: View {
     let sneakers: [Sneaker]
     
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @State private var scrollPercent: Double = 0
     @State private var sneakerID: Sneaker.ID? = nil
     
@@ -62,7 +63,7 @@ struct SneakersView: View {
                     
                     ctaButton
                         .opacity(isCTAVisible ? 1 : 0)
-                        .offset(y: isCTAVisible ? 0 : 30)
+                        .offset(y: isCTAVisible || reduceMotion ? 0 : 30)
                         .padding(.bottom, reader.safeAreaInsets.bottom + 20)
                         .animation(.spring.speed(1.5), value: isCTAVisible)
                 }

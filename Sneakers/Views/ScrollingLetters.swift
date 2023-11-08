@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct ScrollingLetters: View {
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    
     let titles: [String]
     let containerScrollPercent: CGFloat
     let transition: (Bool) -> AnyTransition
@@ -8,7 +10,11 @@ struct ScrollingLetters: View {
     private let allLetters: [String]
     @State private var isMovingLeft: Bool = false
     
-    private var curentLetterIndices: (start: Int, end: Int) {
+    private var currentLetterIndices: (start: Int, end: Int) {
+        guard !reduceMotion else {
+            return reducedMotionLetterIndices
+        }
+        
         let index0 = max(0, Int(floor(containerScrollPercent)))
         let index1 = min(titles.count - 1, Int(ceil(containerScrollPercent)))
         let titlePercent = containerScrollPercent.truncatingRemainder(dividingBy: 1)
@@ -36,6 +42,19 @@ struct ScrollingLetters: View {
                 endLetterIndex.clamped(to: validRange))
     }
     
+    private var reducedMotionLetterIndices: (start: Int, end: Int) {
+        let index = Int(round(containerScrollPercent))
+        
+        var startLetterIndex = 0
+        
+        for wordIndex in 0..<index {
+            startLetterIndex += titles[wordIndex].count
+        }
+        
+        return (startLetterIndex, startLetterIndex + titles[index].count - 1)
+    }
+        
+    
     init(titles: [String], containerScrollPercent: CGFloat, transition: @escaping (Bool) -> AnyTransition = { _ in .opacity }) {
         self.titles = titles
         self.containerScrollPercent = containerScrollPercent
@@ -45,12 +64,12 @@ struct ScrollingLetters: View {
     
     var body: some View {
         HStack(spacing: 0) {
-            let indices = curentLetterIndices
+            let indices = currentLetterIndices
             
             ForEach(indices.start...indices.end, id: \.self) { index in
                 let letter = allLetters[index]
                 Text(verbatim: "\(letter.uppercased())")
-                    .transition(transition(isMovingLeft))
+                    .transition(reduceMotion ? .opacity : transition(isMovingLeft))
             }
         }
         .onChange(of: containerScrollPercent) { oldValue, newValue in
