@@ -63,7 +63,7 @@ private struct PreviewButton: View {
             print("action")
         } label: {
             Label {
-                Text("Star")
+                Text(verbatim: "Star")
             } icon: {
                 Image(systemName: "star")
             }

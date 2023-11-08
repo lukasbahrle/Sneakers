@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct Sneaker {
+struct Sneaker: Identifiable {
     let id = UUID()
     let title: String
     let imageName: String
@@ -12,7 +12,7 @@ extension Array where Element == Sneaker {
         [Sneaker(title: "Giannis",
                 imageName: "giannis",
                 backgroundColor: Color(red: 0.11, green: 0.49, blue: 0.49)),
-        Sneaker(title: "LeBron",
+        Sneaker(title: "Lebron",
                 imageName: "lebron",
                 backgroundColor: Color(red: 0.35, green: 0.28, blue: 0.51)),
         Sneaker(title: "Luka",

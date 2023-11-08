@@ -4,6 +4,11 @@ struct SneakersView: View {
     let sneakers: [Sneaker]
     
     @State private var scrollPercent: Double = 0
+    @State private var sneakerID: Sneaker.ID? = nil
+    
+    private var selectedIndex: Int {
+        Int(round(scrollPercent))
+    }
     
     private var isCTAVisible: Bool {
         let scrollPercentRemainder = scrollPercent.truncatingRemainder(dividingBy: 1)
@@ -31,23 +36,23 @@ struct SneakersView: View {
                     showsIndicators: false,
                     offset: scrollOffsetBinding(width: reader.size.width)) {
                         HStack(spacing: 0) {
-                            ForEach(sneakers, id: \.id) {  sneaker in
-                                sneakerImage(sneaker.imageName)
+                            ForEach(sneakers) {
+                                Image($0.imageName)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .rotationEffect(.degrees(-36))
                                     .shadow(color: .black.opacity(0.06), radius: minSide * 0.07)
                                     .shadow(color: .black.opacity(0.4), radius: minSide * 0.08, y: minSide * 0.12)
                                     .padding(.top, minSide * 0.25)
                                     .containerRelativeFrame(
-                                        .horizontal,
-                                        count: 1,
-                                        span: 1,
-                                        spacing: 0)
+                                        .horizontal)
                                     .frame(maxHeight: .infinity)
-                                
                             }
                         }
-                    .scrollTargetLayout()
-                }
-                .scrollTargetBehavior(.paging)
+                        .scrollTargetLayout()
+                    }
+                    .scrollTargetBehavior(.paging)
+                    .scrollPosition(id: $sneakerID)
                 
                 VStack {
                     logo
@@ -69,6 +74,12 @@ struct SneakersView: View {
                     containerScrollPercent: scrollPercent))
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .ignoresSafeArea()
+        }
+        .accessibilityRepresentation {
+            accessibilityRepresentation
+        }
+        .onAppear {
+            sneakerID = sneakers.first?.id
         }
     }
     
@@ -98,7 +109,7 @@ struct SneakersView: View {
     
     private var ctaButton: some View {
         Button {
-            print("Show now")
+            goToShop()
         } label: {
             Label {
                 Text("Shop")
@@ -109,12 +120,52 @@ struct SneakersView: View {
         .buttonStyle(.ctaButton)
     }
     
-    private func sneakerImage(_ imageName: String) -> some View {
-        Image(imageName)
-            .resizable()
-            .scaledToFit()
-            .rotationEffect(.degrees(-36))
+    private func goToShop() {
+        print("shop \(sneakers[selectedIndex].title)")
     }
+    
+    // MARK: - Accessibility
+    
+    private var accessibilityRepresentation: some View {
+        Button(action: {
+            goToShop()
+        }, label: {
+            Text("Sneakers slider" )
+        })
+        .accessibilityValue("\(sneakers[selectedIndex].title), Shop")
+        .accessibilityAdjustableAction { direction in
+            switch direction {
+            case .increment:
+                guard selectedIndex < (sneakers.count - 1) else { break }
+                scrollToNext()
+            case .decrement:
+                guard selectedIndex > 0 else { break }
+                scrollToPrevious()
+            @unknown default:
+                break
+            }
+        }
+    }
+    
+    private func scrollToNext() {
+            guard let id = sneakerID, id != sneakers.last?.id,
+                  let index = sneakers.firstIndex(where: { $0.id == id })
+            else { return }
+
+            withAnimation {
+                sneakerID = sneakers[index + 1].id
+            }
+        }
+
+        private func scrollToPrevious() {
+            guard let id = sneakerID, id != sneakers.first?.id,
+                  let index = sneakers.firstIndex(where: { $0.id == id })
+            else { return }
+
+            withAnimation {
+                sneakerID = sneakers[index - 1].id
+            }
+        }
 }
 
 #Preview {
