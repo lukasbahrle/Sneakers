@@ -53,7 +53,6 @@ struct ScrollingLetters: View {
         
         return (startLetterIndex, startLetterIndex + titles[index].count - 1)
     }
-        
     
     init(titles: [String], containerScrollPercent: CGFloat, transition: @escaping (Bool) -> AnyTransition = { _ in .opacity }) {
         self.titles = titles

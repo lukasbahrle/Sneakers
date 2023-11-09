@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		F53341CB2AF625A9004BF6B1 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = F53341CA2AF625A9004BF6B1 /* Localizable.xcstrings */; };
+		F58787482AFCA7CC006A0014 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58787472AFCA7CC006A0014 /* TitleView.swift */; };
+		F587874A2AFCA9D2006A0014 /* CTAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58787492AFCA9D2006A0014 /* CTAButton.swift */; };
+		F587874D2AFCAB58006A0014 /* SneakersImageSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F587874C2AFCAB58006A0014 /* SneakersImageSlider.swift */; };
+		F587874F2AFCAD90006A0014 /* SneakersAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = F587874E2AFCAD90006A0014 /* SneakersAccessibility.swift */; };
 		F5DCC65E2AE7035400B418CE /* SneakersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DCC65D2AE7035400B418CE /* SneakersApp.swift */; };
 		F5DCC6602AE7035400B418CE /* SneakersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DCC65F2AE7035400B418CE /* SneakersView.swift */; };
 		F5DCC6622AE7035500B418CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5DCC6612AE7035500B418CE /* Assets.xcassets */; };
@@ -21,6 +25,10 @@
 
 /* Begin PBXFileReference section */
 		F53341CA2AF625A9004BF6B1 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		F58787472AFCA7CC006A0014 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		F58787492AFCA9D2006A0014 /* CTAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTAButton.swift; sourceTree = "<group>"; };
+		F587874C2AFCAB58006A0014 /* SneakersImageSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SneakersImageSlider.swift; sourceTree = "<group>"; };
+		F587874E2AFCAD90006A0014 /* SneakersAccessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SneakersAccessibility.swift; sourceTree = "<group>"; };
 		F5DCC65A2AE7035400B418CE /* Sneakers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sneakers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5DCC65D2AE7035400B418CE /* SneakersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SneakersApp.swift; sourceTree = "<group>"; };
 		F5DCC65F2AE7035400B418CE /* SneakersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SneakersView.swift; sourceTree = "<group>"; };
@@ -44,6 +52,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F58787462AFCA7AD006A0014 /* Title */ = {
+			isa = PBXGroup;
+			children = (
+				F58787472AFCA7CC006A0014 /* TitleView.swift */,
+				F5DCC66E2AE7081C00B418CE /* ScrollingLetters.swift */,
+			);
+			path = Title;
+			sourceTree = "<group>";
+		};
+		F587874B2AFCAAEB006A0014 /* CTA */ = {
+			isa = PBXGroup;
+			children = (
+				F58787492AFCA9D2006A0014 /* CTAButton.swift */,
+				F5DCC6722AE70A3700B418CE /* CTAButtonStyle.swift */,
+			);
+			path = CTA;
+			sourceTree = "<group>";
+		};
 		F5DCC6512AE7035400B418CE = {
 			isa = PBXGroup;
 			children = (
@@ -65,7 +91,6 @@
 			children = (
 				F5DCC6792AE70D0600B418CE /* Resources */,
 				F5DCC6782AE70CC800B418CE /* Shared */,
-				F5DCC6772AE70CB400B418CE /* ButtonStyles */,
 				F5DCC6762AE70CA100B418CE /* Views */,
 				F5DCC66B2AE7068E00B418CE /* Models */,
 				F5DCC65D2AE7035400B418CE /* SneakersApp.swift */,
@@ -92,19 +117,14 @@
 		F5DCC6762AE70CA100B418CE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F587874B2AFCAAEB006A0014 /* CTA */,
+				F58787462AFCA7AD006A0014 /* Title */,
 				F5DCC65F2AE7035400B418CE /* SneakersView.swift */,
-				F5DCC66E2AE7081C00B418CE /* ScrollingLetters.swift */,
 				F5DCC6702AE709B000B418CE /* ScrollingColors.swift */,
+				F587874C2AFCAB58006A0014 /* SneakersImageSlider.swift */,
+				F587874E2AFCAD90006A0014 /* SneakersAccessibility.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		F5DCC6772AE70CB400B418CE /* ButtonStyles */ = {
-			isa = PBXGroup;
-			children = (
-				F5DCC6722AE70A3700B418CE /* CTAButtonStyle.swift */,
-			);
-			path = ButtonStyles;
 			sourceTree = "<group>";
 		};
 		F5DCC6782AE70CC800B418CE /* Shared */ = {
@@ -197,10 +217,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F587874A2AFCA9D2006A0014 /* CTAButton.swift in Sources */,
+				F587874F2AFCAD90006A0014 /* SneakersAccessibility.swift in Sources */,
 				F5DCC6752AE70B5500B418CE /* WSScrollView.swift in Sources */,
 				F5DCC6602AE7035400B418CE /* SneakersView.swift in Sources */,
+				F587874D2AFCAB58006A0014 /* SneakersImageSlider.swift in Sources */,
 				F5DCC66F2AE7081C00B418CE /* ScrollingLetters.swift in Sources */,
 				F5DCC6732AE70A3700B418CE /* CTAButtonStyle.swift in Sources */,
+				F58787482AFCA7CC006A0014 /* TitleView.swift in Sources */,
 				F5DCC66D2AE7069800B418CE /* Sneaker.swift in Sources */,
 				F5DCC65E2AE7035400B418CE /* SneakersApp.swift in Sources */,
 				F5DCC6712AE709B000B418CE /* ScrollingColors.swift in Sources */,
