@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F53341CB2AF625A9004BF6B1 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = F53341CA2AF625A9004BF6B1 /* Localizable.xcstrings */; };
+		F55226992AFFC2FA009EB274 /* View+ScaledPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55226982AFFC2FA009EB274 /* View+ScaledPadding.swift */; };
+		F552269B2B0025AF009EB274 /* View+ScaledKerning.swift in Sources */ = {isa = PBXBuildFile; fileRef = F552269A2B0025AF009EB274 /* View+ScaledKerning.swift */; };
 		F58787482AFCA7CC006A0014 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58787472AFCA7CC006A0014 /* TitleView.swift */; };
 		F587874A2AFCA9D2006A0014 /* CTAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58787492AFCA9D2006A0014 /* CTAButton.swift */; };
 		F587874D2AFCAB58006A0014 /* SneakersImageSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F587874C2AFCAB58006A0014 /* SneakersImageSlider.swift */; };
@@ -25,6 +27,8 @@
 
 /* Begin PBXFileReference section */
 		F53341CA2AF625A9004BF6B1 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		F55226982AFFC2FA009EB274 /* View+ScaledPadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+ScaledPadding.swift"; sourceTree = "<group>"; };
+		F552269A2B0025AF009EB274 /* View+ScaledKerning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+ScaledKerning.swift"; sourceTree = "<group>"; };
 		F58787472AFCA7CC006A0014 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		F58787492AFCA9D2006A0014 /* CTAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTAButton.swift; sourceTree = "<group>"; };
 		F587874C2AFCAB58006A0014 /* SneakersImageSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SneakersImageSlider.swift; sourceTree = "<group>"; };
@@ -131,6 +135,8 @@
 			isa = PBXGroup;
 			children = (
 				F5DCC6742AE70B5500B418CE /* WSScrollView.swift */,
+				F55226982AFFC2FA009EB274 /* View+ScaledPadding.swift */,
+				F552269A2B0025AF009EB274 /* View+ScaledKerning.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -221,7 +227,9 @@
 				F587874F2AFCAD90006A0014 /* SneakersAccessibility.swift in Sources */,
 				F5DCC6752AE70B5500B418CE /* WSScrollView.swift in Sources */,
 				F5DCC6602AE7035400B418CE /* SneakersView.swift in Sources */,
+				F55226992AFFC2FA009EB274 /* View+ScaledPadding.swift in Sources */,
 				F587874D2AFCAB58006A0014 /* SneakersImageSlider.swift in Sources */,
+				F552269B2B0025AF009EB274 /* View+ScaledKerning.swift in Sources */,
 				F5DCC66F2AE7081C00B418CE /* ScrollingLetters.swift in Sources */,
 				F5DCC6732AE70A3700B418CE /* CTAButtonStyle.swift in Sources */,
 				F58787482AFCA7CC006A0014 /* TitleView.swift in Sources */,
