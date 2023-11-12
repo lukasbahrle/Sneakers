@@ -8,21 +8,24 @@ extension ButtonStyle where Self == CTAButtonStyle {
 
 struct CTAButtonStyle: ButtonStyle {
     @Environment(\.legibilityWeight) private var legibilityWeight
-    @ScaledMetric(relativeTo: .body) private var fontScaleFactor = 1
-    @ScaledMetric(relativeTo: .largeTitle) private var paddingScaleFactor = 1
+    @Environment(\.colorSchemeContrast) private var colorSchemeContrast
     
     private var fontWeight: Font.Weight {
         legibilityWeight == .bold ? .bold : .medium
     }
     
+    private var backgroundOpacity: CGFloat {
+        colorSchemeContrast == .increased ? 0.2 : 0.15
+    }
+    
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .font(.custom("AvenirNextCondensed-Italic", fixedSize: 20 * fontScaleFactor))
+            .font(.custom("AvenirNextCondensed-Italic", size: 20, relativeTo: .body))
             .fontWeight(fontWeight)
-            .kerning(2 * fontScaleFactor)
-            .padding(.vertical, 12 * paddingScaleFactor)
-            .padding(.horizontal, 16 * paddingScaleFactor)
-            .background(Rectangle().fill(.white.opacity(0.15)))
+            .kerning(2, relativeTo: .body)
+            .padding(.vertical, 12, relativeTo: .largeTitle)
+            .padding(.horizontal, 16, relativeTo: .largeTitle)
+            .background(Rectangle().fill(.white.opacity(backgroundOpacity)))
             .labelStyle(CTAButtonLabelStyle())
             .opacity(configuration.isPressed ? 0.5 : 1.0)
     }
@@ -46,10 +49,10 @@ private struct CTAButtonLabelStyle: LabelStyle {
         PreviewButton()
         
         PreviewButton()
-        .environment(\.legibilityWeight, .bold)
+            .environment(\.legibilityWeight, .bold)
         
         PreviewButton()
-        .environment(\.dynamicTypeSize, .accessibility2)
+            .environment(\.dynamicTypeSize, .accessibility2)
     }
     .buttonStyle(.ctaButton)
     .frame(maxWidth: .infinity, maxHeight: .infinity)

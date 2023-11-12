@@ -11,15 +11,15 @@ extension Array where Element == Sneaker {
     static var data: [Sneaker] {
         [Sneaker(title: "Giannis",
                 imageName: "giannis",
-                backgroundColor: Color(red: 0.11, green: 0.49, blue: 0.49)),
+                 backgroundColor: Color(.giannis)),
         Sneaker(title: "Lebron",
                 imageName: "lebron",
-                backgroundColor: Color(red: 0.35, green: 0.28, blue: 0.51)),
+                backgroundColor: Color(.lebron)),
         Sneaker(title: "Luka",
                 imageName: "luka",
-                backgroundColor: Color(red: 0.28, green: 0.45, blue: 0.67)),
+                backgroundColor: Color(.luka)),
         Sneaker(title: "KD",
                 imageName: "kd",
-                backgroundColor: Color(red: 0.92, green: 0.4, blue: 0.44))]
+                backgroundColor: Color(.kd))]
     }
 }
