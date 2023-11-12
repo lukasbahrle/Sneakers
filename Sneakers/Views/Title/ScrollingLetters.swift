@@ -97,7 +97,7 @@ private struct PreviewView: View {
             ScrollingLetters(titles: titles, containerScrollPercent: scrollPercent) { _ in
                     .scale
             }
-           
+            
             ScrollingLetters(titles: titles, containerScrollPercent: scrollPercent) { _ in
                     .move(edge: .bottom).combined(with: .opacity)
             }

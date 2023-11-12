@@ -20,10 +20,10 @@ struct SneakersView: View {
             let minSide = min(reader.size.width, reader.size.height)
             ZStack {
                 TitleView(titles: sneakers.map { $0.title },
-                                  containerSize: reader.size,
-                                  scrollPercent: scrollPercent)
-                    .frame(maxHeight: .infinity)
-                    .offset(y: -minSide * 0.22)
+                          containerSize: reader.size,
+                          scrollPercent: scrollPercent)
+                .frame(maxHeight: .infinity)
+                .offset(y: -minSide * 0.22)
                 
                 SneakersImageSlider(sneakers: sneakers,
                                     sneakerID: $sneakerID,

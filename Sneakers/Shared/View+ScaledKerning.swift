@@ -1,9 +1,9 @@
 import SwiftUI
 
-struct ScaledKerningModifier: ViewModifier {
+private struct ScaledKerningModifier: ViewModifier {
     let kerning: CGFloat
     @ScaledMetric private var scaleFactor = 1
-
+    
     init(kerning: CGFloat, relativeTo: Font.TextStyle) {
         self.kerning = kerning
         self._scaleFactor = ScaledMetric(wrappedValue: 1, relativeTo: relativeTo)

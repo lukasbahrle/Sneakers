@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct ScaledPaddingModifier: ViewModifier {
+private struct ScaledPaddingModifier: ViewModifier {
     let edges: Edge.Set
     let length: CGFloat?
     @ScaledMetric private var scaleFactor = 1
@@ -11,7 +11,7 @@ struct ScaledPaddingModifier: ViewModifier {
         }
         return length * scaleFactor
     }
-
+    
     init(edges: Edge.Set, length: CGFloat?, relativeTo: Font.TextStyle) {
         self.edges = edges
         self.length = length

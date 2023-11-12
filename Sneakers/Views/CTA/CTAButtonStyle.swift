@@ -35,7 +35,7 @@ private struct CTAButtonLabelStyle: LabelStyle {
     func makeBody(configuration: Configuration) -> some View {
         HStack(spacing: 6) {
             configuration.title
-                    
+            
             configuration.icon
                 .transformEffect(CGAffineTransform(a: 1, b: 0, c: -0.15, d: 1, tx: 0, ty: 0))
         }
